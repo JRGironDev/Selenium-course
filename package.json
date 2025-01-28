@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --timeout 60000"
   },
   "keywords": [
     "selenium"
@@ -14,5 +14,8 @@
   "devDependencies": {
     "chromedriver": "^132.0.1",
     "selenium-webdriver": "^4.28.1"
+  },
+  "dependencies": {
+    "mocha": "^11.1.0"
   }
 }
