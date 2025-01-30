@@ -188,3 +188,198 @@ console.log(comparación);
 
 */
 
+// if/else/else if/ternaria
+
+// 1. Imprime por consola tu nombre si una variable toma su valor
+
+let nombre = "José";
+if (nombre == "José") {
+    console.log(nombre);
+}
+
+// 2. Imprime por consola un mensaje si el usuario y contraseña concide con unos establecidos
+
+let usuario = "joserobertoq@outlook.com";
+let contraseña = "2Hidroxil@";
+if (usuario == "joserobertoq@outlook.com" && contraseña == "2Hidroxil@") {
+    console.log("Correcto");
+}
+
+// 3. Verifica si un número es positivo, negativo o cero e imprime un mensaje
+
+let numero = 0;
+if (numero > 0) {
+    console.log("Positivo");
+} else if (numero < 0) {
+    console.log("Negativo");
+} else {
+    console.log("Cero");
+}
+
+// 4. Verifica si una persona puede votar o no (mayor o igual a 18) e indica cuántos años le faltan
+
+let edad = 19;
+if (edad >= 18) {
+    console.log("Puede votar");
+} else {
+    console.log("No puede votar");
+    console.log(`Le faltan ${18 - edad} años`);
+}
+
+// 5. Usa el operador ternario para asignar el valor "adulto" o "menor" a una variable
+//    dependiendo de la edad 
+
+let adulto = edad >= 18 ? "Adulto" : "Menor";
+console.log(adulto);
+
+// 6. Muestra en que estación del año nos encontramos dependiendo del valor de una variable "mes"
+
+let mes = 1;
+
+if (mes == 1) {
+    console.log("Invierno");
+} else if (mes == 2) {
+    console.log("Primavera");
+} else if (mes == 3) {
+    console.log("Primavera");
+} else if (mes == 4) {
+    console.log("Verano");
+} else if (mes == 5) {
+    console.log("Verano");
+} else if (mes == 6) {
+    console.log("Otoño");
+} else if (mes == 7) {
+    console.log("Otoño");
+} else if (mes == 8) {
+    console.log("Verano");
+} else if (mes == 9) {
+    console.log("Otño");
+} else if (mes == 10) {
+    console.log("Otoño");
+} else if (mes == 11) {
+    console.log("Invierno");
+} else if (mes == 12) {
+    console.log("Invierno");
+} else {
+    console.log("Mes incorrecto");
+}
+
+// 7. Muestra el número de días que tiene un mes dependiendo de la variable del ejercicio anterior
+
+// switch
+
+switch (mes) {
+    case 1:
+        console.log("31 días");
+        break;
+    case 2:
+        console.log("28 días");
+        break;
+    case 3:
+        console.log("31 días");
+        break;
+    case 4:
+        console.log("30 días");
+        break;
+    case 5:
+        console.log("31 días");
+        break;
+    case 6:
+        console.log("30 días");
+        break;
+    case 7:
+        console.log("31 días");
+        break;
+    case 8:
+        console.log("31 días");
+        break;
+    case 9:
+        console.log("30 días");
+        break;
+    case 10:
+        console.log("31 días");
+        break;
+    case 11:
+        console.log("30 días");
+        break;
+    case 12:
+        console.log("31 días");
+        break;
+    default:
+        console.log("Mes incorrecto");
+}
+
+// 8. Usa un switch para imprimir un mensaje de saludo diferente dependiendo del idioma
+
+let idioma = "italiano";
+
+switch (idioma) {
+    case "español":
+        console.log("Hola");
+        break;
+    case "inglés":
+        console.log("Hello");
+        break;
+    case "francés":
+        console.log("Bonjour");
+        break;
+    case "alemán":
+        console.log("Hallo");
+        break;
+    case "italiano":
+        console.log("Ciao");
+        break;
+    case "portugués":
+        console.log("Olá");
+        break;
+    case "chino":
+        console.log("你好");
+        break;
+}
+
+// 9. Usa un switch para hacer de nuevo el ejercicio 6
+
+mes = 6;
+switch (mes) {
+    case 1:
+        console.log("Invierno");
+        break;
+    case 2:
+        console.log("Primavera");
+        break;
+    case 3:
+        console.log("Primavera");
+        break;
+    case 4:
+        console.log("Verano");
+        break;
+    case 5:
+        console.log("Verano");
+        break;
+    case 6:
+        console.log("Otoño");
+        break;
+    case 7:
+        console.log("Otoño");
+        break;
+    case 8:
+        console.log("Verano");
+        break;
+    case 9:
+        console.log("Otño");
+        break;
+    case 10:
+        console.log("Otoño");
+        break;
+    case 11:
+        console.log("Invierno");
+        break;
+    case 12:
+        console.log("Invierno");
+        break;
+    default:
+        console.log("Mes incorrecto");
+}
+
+// 10. Usa un switch para hacer de nuevo el ejercicio 7
+
