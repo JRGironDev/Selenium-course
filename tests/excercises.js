@@ -381,8 +381,6 @@ switch (mes) {
 
 // 10. Usa un switch para hacer de nuevo el ejercicio 7
 
-*/
-
 // 1. Crea un array que almacene cinco animales
 
 let animales = ["Perro", "Gato", "Ratón", "Elefante", "Tigre"];
@@ -462,3 +460,109 @@ let meses4 = new Map([
 ]);
 
 console.log(meses4);
+
+// 1. Crea un bucle que imprima los números del 1 al 20
+
+for (let i = 1; i <= 20; i++) {
+    console.log(i);
+}
+
+// 2. Crea un bucle que sume todos los números del 1 al 100 y muestre el resultado
+
+let suma = 0;
+for (let i = 1; i <= 100; i++) {
+    suma = suma + 1;
+}
+
+console.log(suma);
+
+// 3. Crea un bucle que imprima todos los números pares entre 1 y 50
+
+for (let i = 1; i <= 50; i++) {
+    if (i % 2 == 0) {
+        console.log(i);
+    }
+}
+
+// 4. Dado un array de nombres, usa un bucle para imprimir cada nombre en la consola
+
+let nombres = ["José", "Roberto", "Quinonez"];
+
+nombres.forEach(function(nombre) {
+    console.log(nombre);
+});
+
+for (let i = 0; i < nombres.length; i++) {
+    console.log(nombres[i]);
+}
+
+// 5. Escribe un bucle que cuente el número de vocales en una cadena de texto
+
+let cadena = "Hola Mundo";
+
+let vocales = 0;
+
+for (let i = 0; i < cadena.length; i++) {
+    if (cadena[i] == "a" || cadena[i] == "e" || cadena[i] == "i" || cadena[i] == "o" || cadena[i] == "u") {
+        vocales++;
+    }
+}
+
+console.log(vocales);
+
+// 6. Dado un array de números, usa un bucle para multiplicar todos los números y mostrar el producto
+
+let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let producto = 1;
+
+numeros.forEach(function(numero) {
+    producto = producto * numero;
+});
+
+console.log(producto);
+
+// 7. Escribe un bucle que imprima la tabla de multiplicar del 5
+
+for (let i = 1; i <= 5; i++) {
+    console.log(`5 x ${i} = ${5 * i}`);
+}
+
+// 8. Usa un bucle para invertir una cadena de texto
+
+cadena = "Hola Mundo";
+
+let invertida = "";
+
+for (let i = cadena.length - 1; i >= 0; i--) {
+    invertida = invertida + cadena[i];
+}
+
+console.log(invertida);
+
+// 9. Usa un bucle para generar los primeros 10 números de la secuencia de Fibonacci
+
+let fibonacci = [0, 1];
+
+for (let i = 2; i <= 10; i++) {
+    fibonacci.push(fibonacci[i - 1] + fibonacci[i - 2]);
+}
+
+console.log(fibonacci);
+
+// 10. Dado un array de números, usa un bucle para crear un nuevo array que contenga solo los números mayores a 10
+
+let numbers = [1, 12, 3, 4, 15, 6, 27, 8, 49, 10];
+
+let filteredNumbers = [];
+
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > 10) {
+        filteredNumbers.push(numbers[i]);
+    }
+}
+
+console.log(filteredNumbers);
+
+*/
+
