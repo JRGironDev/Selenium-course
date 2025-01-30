@@ -566,3 +566,257 @@ console.log(filteredNumbers);
 
 */
 
+// NOTA: Explora diferentes sintaxis de funciones para resolver los ejercicios
+
+// 1. Crea una función que reciba dos números y devuelva su suma
+
+function sum(a, b) {
+    return a + b
+}
+
+console.log(sum(1, 2));
+
+// 2. Crea una función que reciba un array de números y devuelva el mayor de ellos
+
+let numbers = [1, 2, 3, 4, 5];
+let max = numbers[0];    
+
+function maxNumber(numbers) {
+    //return Math.max(...numbers);
+
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] > max) {
+            max = numbers[i];
+        }
+    }
+
+    return max;
+}
+
+console.log(maxNumber([1, 2, 3, 4, 5]));
+
+
+// 3. Crea una función que reciba un string y devuelva el número de vocales que contiene
+
+let string = "Hola Mundo";
+
+function countVocals(string) {
+    let vocals = 0;
+
+    for(let i = 0; i < string.length; i++) {
+        if(string[i].match(/[aeiou]/i)) {
+            vocals++;
+        }
+    }
+
+    return vocals;
+}
+
+console.log(countVocals('hola'));
+
+// 3.5 Implement a function to check if a fiven string is a palindrome
+
+function isPalindrome(string) {
+    let reversed = string.split('').reverse().join('');
+
+    return string === reversed;
+}
+
+console.log(isPalindrome('racecar'));
+console.log(isPalindrome('hello'));
+
+// 3.6 Write a program to find the factorial of a number using recursion
+function factorial(n) {
+    if(n === 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+console.log(factorial(5));
+
+// 3.7 Given a list of integers, write a function to return the sum of all postive numbers in the list
+
+function sumPositive(numbers) {
+    let sum = 0;
+
+    for(let i = 0; i < numbers.length; i++) {
+        if(numbers[i] > 0) {
+            sum += numbers[i];
+        }
+    }
+
+    return sum;
+}
+
+console.log(sumPositive([1, -2, 3, -4, 5]));
+
+// 3.8 Implement a function to reverse a linked list
+
+let actualList = [1, 2, 3, 4, 5, 6, 7];
+
+function reverseList(list) {
+    for(let i = 0; i < list.length / 2; i++) {
+        let temp = list[i];
+        list[i] = list[list.length - i - 1];
+        list[list.length - i - 1] = temp;
+    }
+
+    return list;
+}
+
+console.log(reverseList(actualList));
+
+// 3.9 Given a sorted array, write a function to search for a target value using binary search
+
+let sortedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function binarySearch(arr, target) {
+    let low = 0;
+    let high = arr.length - 1;
+
+    while (low <= high) {
+        let mid = Math.floor((low + high) / 2);
+
+        if (arr[mid] === target) {
+            return mid;
+        } else if (arr[mid] < target) {
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+}
+
+const index = binarySearch(sortedArray, 10);
+console.log(index);
+
+// 3.10 Write code to validate if a given string is a valid email address
+
+const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+const email = 'joserobertoq.outlook.com';
+
+if (emailRegex.test(email)) {
+    console.log('Valid email');
+} else {
+    console.log('Invalid email');
+}
+
+// 4. Crea una función que reciba un array de strings y devuelva un nuevo array con las strings en mayúsculas
+
+let array = ['hola', 'como', 'estas'];
+let newArray = array.map(word => word.toUpperCase());
+console.log(newArray);
+
+// 5. Crea una función que reciba un número y devuelva true si es primo, y false en caso contrario
+
+let number = 6;
+
+function isPrime(n) {
+    if (n <= 1) {
+        return false;
+    } else {
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+console.log(isPrime(number));
+
+// 6. Crea una función que reciba dos arrays y devuelva un nuevo array que contenga los elementos comunes entre ambos
+
+let array1 = [1, 2, 3, 4, 5];
+let array2 = [3, 4, 5, 6, 7];
+
+function commonElements(arr1, arr2) {
+    return arr1.filter(element => arr2.includes(element));
+}
+
+console.log(commonElements(array1, array2));
+
+// 7. Crea una función que reciba un array de números y devuelva la suma de todos los números pares
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function sumEven(numbers) {
+    let sum = 0;
+
+    for(let i = 0; i < numbers.length; i++) {
+        if(numbers[i] % 2 == 0) {
+            sum += numbers[i];
+        }
+    }
+
+    return sum;
+}
+
+console.log(sumEven(numbers));
+
+// 8. Crea una función que reciba un array de números y devuelva un nuevo array con cada número elevado al cuadrado
+
+let numbers2 = [1, 2, 3, 4, 5];
+
+function squareNumbers(numbers) {
+    return numbers.map(number => number ** 2);
+}
+
+console.log(squareNumbers(numbers2));
+
+// 9. Crea una función que reciba una cadena de texto y devuelva la misma cadena con las palabras en orden inverso
+
+let text = "Hola Mundo";
+
+function reverseWords(text) {
+    return text.split(' ').reverse().join(' ');
+}
+
+console.log(reverseWords(text));
+
+// 10. Crea una función que calcule el factorial de un número dado
+
+let number2 = 5;
+
+function factorial(n) {
+    // Caso base: si n es 0, devuelve 1
+    if(n === 0) {
+        return 1;
+    } else {
+        // Caso recursivo: n * factorial de (n - 1)
+        return n * factorial(n - 1);
+    }
+}
+
+let result = factorial(number2);
+
+console.log(result);
+
+// 11. Crea una función que reciba un array y devuelva un array con los elementos invertidos
+
+function invertArray(array) {
+    return array.reverse();
+}
+
+console.log(invertArray([1, 2, 3, 4, 5]));
+
+// 12. Crea una función que reciba un array y devuelva un array con los elementos ordenados de mayor a menor
+
+function sortArray(array) {
+    return array.sort((a, b) => b - a);
+}
+
+console.log(sortArray([5, 3, 1, 4, 2]));
+
+// 13. Crea una función que reciba un array y devuelva un array con los elementos ordenados de menor a mayor
+
+function sortArrayDesc(array) {
+    return array.sort((a, b) => a - b);
+}
+
+console.log(sortArrayDesc([5, 3, 1, 4, 2]));
+
+
