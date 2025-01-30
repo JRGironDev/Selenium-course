@@ -186,8 +186,6 @@ let longitud2 = iguales2.length;
 let comparación = longitud1 == longitud2 ? "Igual" : "Diferente";
 console.log(comparación);
 
-*/
-
 // if/else/else if/ternaria
 
 // 1. Imprime por consola tu nombre si una variable toma su valor
@@ -383,3 +381,84 @@ switch (mes) {
 
 // 10. Usa un switch para hacer de nuevo el ejercicio 7
 
+*/
+
+// 1. Crea un array que almacene cinco animales
+
+let animales = ["Perro", "Gato", "Ratón", "Elefante", "Tigre"];
+console.log(animales);
+
+// 2. Añade dos más. Uno al principio y otro al final
+
+animales.unshift("León");
+animales.push("Perrito");
+console.log(animales);
+
+// 3. Elimina el que se encuentra en tercera posición
+
+animales.splice(2, 1);
+console.log(animales);
+
+// 4. Crea un set que almacene cinco libros
+
+let libros = new Set(["El Señor de los Anillos", "Harry Potter", "Cien años de soledad", "Don Quijote de la Mancha", "La Odisea"]);
+
+console.log(libros);
+
+// 5. Añade dos más. Uno de ellos repetido
+
+libros.add("El Señor de los Anillos");
+libros.add("El Perfume");
+console.log(libros);
+
+// 6. Elimina uno concreto a tu elección
+
+libros.delete("Harry Potter");
+console.log(libros);
+
+// 7. Crea un mapa que asocie el número del mes a su nombre
+
+let meses = new Map([
+    [1, "Enero"],
+    [2, "Febrero"],
+    [3, "Marzo"],
+    [4, "Abril"],
+    [5, "Mayo"],
+    [6, "Junio"],
+    [7, "Julio"],
+    [8, "Agosto"],
+    [9, "Septiembre"],
+    [10, "Octubre"],
+    [11, "Noviembre"],
+    [12, "Diciembre"]
+]);
+
+console.log(meses);
+
+// 8. Comprueba si el mes número 5 existe en el map e imprime su valor
+
+if (meses.has(5)) {
+    console.log(meses.get(5));
+}
+
+// 9. Añade al mapa una clave con un array que almacene los meses de verano
+
+meses.set("Verano", ["Junio", "Julio", "Agosto"]);
+
+console.log(meses);
+
+// 10. Crea un Array, transfórmalo a un Set y almacénalo en un Map
+
+let meses2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+console.log(meses2);
+
+let meses3 = new Set(meses2);
+
+console.log(meses3);
+
+let meses4 = new Map([
+    ["Meses", meses3]
+]);
+
+console.log(meses4);
